@@ -1,4 +1,6 @@
 language: ruby
+before_install:
+  - git submodule update --init --recursive
 bundler_args: --without development
 script: "bundle exec rake build"
 rvm:
